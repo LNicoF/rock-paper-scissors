@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Rock Paper Scissors! </title>
+    <!-- <link rel="stylesheet" href="{{ route( 'css/style.css' ) }}"> -->
+</head>
+<body>
+    <form action="/choice/send" id="choice-form">
+        <div class="choice-row">
+            <div class="choice">
+                <input type="radio" name="choice" value="0" required
+                       id="rock">
+                <label for="rock"> ✊ </label>
+            </div>
+            <div class="choice">
+                <input type="radio" name="choice" value="1" required
+                       id="paper">
+                <label for="paper"> ✋ </label>
+            </div>
+            <div class="choice">
+                <input type="radio" name="choice" value="2" required
+                       id="scissors">
+                <label for="scissors"> ✌ </label>
+            </div>
+        </div>
+        <button type="submit"> Go! </button>
+    </form>
+
+    <table class="results">
+        <thead>
+            <th> Me </th>
+            <th></th>
+            <th> CPU </th>
+        </thead>
+        <tr>
+            <td id="choice-dump"></td>
+            <td class="versus"> vs </td>
+            <td id="response-dump"></td>
+        </tr>
+    </table>
+
+    <div class="result" id="result">
+        <span></span>
+    </div>
+
+    <script src="{{ route( 'js/main.js' ) }}"></script>
+</body>
+</html>
