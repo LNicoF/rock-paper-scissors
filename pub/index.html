@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Rock Paper Scissors! </title>
-    <!-- <link rel="stylesheet" href="{{ route( 'css/style.css' ) }}"> -->
+    <link rel="stylesheet" href="{{ route( 'css/style.css' ) }}">
 </head>
 <body>
-    <form action="/choice/send" id="choice-form">
+    <form action="/choice/send" id="choice-form" class="choice-form">
         <div class="choice-row">
             <div class="choice">
                 <input type="radio" name="choice" value="0" required
                        id="rock">
-                <label for="rock"> ✊ </label>
+                <label for="rock" class="hand"> ✊ </label>
             </div>
             <div class="choice">
                 <input type="radio" name="choice" value="1" required
                        id="paper">
-                <label for="paper"> ✋ </label>
+                <label for="paper" class="hand"> ✋ </label>
             </div>
             <div class="choice">
                 <input type="radio" name="choice" value="2" required
                        id="scissors">
-                <label for="scissors"> ✌ </label>
+                <label for="scissors" class="hand"> ✌ </label>
             </div>
         </div>
         <button type="submit"> Go! </button>
@@ -35,9 +35,9 @@
             <th> CPU </th>
         </thead>
         <tr>
-            <td id="choice-dump"></td>
+            <td id="choice-dump" class="hand"></td>
             <td class="versus"> vs </td>
-            <td id="response-dump"></td>
+            <td id="response-dump" class="hand"></td>
         </tr>
     </table>
 
