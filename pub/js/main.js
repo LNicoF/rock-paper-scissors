@@ -10,6 +10,11 @@ let choiceInputs = document.querySelectorAll( 'input[name=\'choice\']' )
 let responseDump = document.querySelector( '#response-dump' )
 let resultDump   = document.querySelector( '#result span' )
 
+const clearMatch = () => {
+    responseDump.innerHTML = ''
+    resultDump.innerHTML   = ''
+}
+
 const updateChoice = ( from ) => {
     const label = getLabel( from )
     inputDump.innerHTML = label.innerHTML
@@ -62,7 +67,10 @@ const sendChoice = async ( choice ) => {
 
 const init = () => {
     for ( let input of choiceInputs ) {
-        input.onchange = ( ev ) => updateChoice( ev.target )
+        input.onchange = ( ev ) => {
+            clearMatch()
+            updateChoice( ev.target )
+        }
         if ( input.checked ) {
             updateChoice( input )
         }
