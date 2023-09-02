@@ -1,0 +1,22 @@
+{
+  "name": "rock-paper-scissors",
+  "version": "1.0.0",
+  "description": "Simple Rock-Paper-Scissors game with nodejs",
+  "main": "index.mjs",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LNicoF/rock-paper-scissors.git"
+  },
+  "author": "LNicoF",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LNicoF/rock-paper-scissors/issues"
+  },
+  "homepage": "https://github.com/LNicoF/rock-paper-scissors#readme"
+}
